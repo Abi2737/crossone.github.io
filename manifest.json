@@ -1,0 +1,97 @@
+{
+    "name": "Cross One",
+    "short_name": "Cross One",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#FFFFFF",
+    "theme_color": "#D81B5A",
+    "description": "Cross One este un Radio Online Crestin care oferă muzică creștină nouă, o mare varietate de emisiuni produse în studioul nostru, live-uri, articole interesante, știri și resurse creștine utile.",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/Icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "screenshots/image1.jpg",
+            "sizes": "1080x2270",
+            "type": "image/jpg",
+            "form_factor": "narrow"
+        },
+        {
+            "src": "screenshots/image2.jpg",
+            "sizes": "1080x2270",
+            "type": "image/jpg",
+            "form_factor": "narrow"
+        },
+        {
+            "src": "screenshots/image3.jpg",
+            "sizes": "1080x2270",
+            "type": "image/jpg",
+            "form_factor": "narrow"
+        },
+        {
+            "src": "screenshots/image4.jpg",
+            "sizes": "1080x2270",
+            "type": "image/jpg",
+            "form_factor": "narrow"
+        },
+        {
+            "src": "screenshots/image5.jpg",
+            "sizes": "1080x2270",
+            "type": "image/jpg",
+            "form_factor": "narrow"
+        },
+        {
+            "src": "screenshots/image6.jpg",
+            "sizes": "1080x2270",
+            "type": "image/jpg",
+            "form_factor": "narrow"
+        },
+        {
+            "src": "screenshots/image7.jpg",
+            "sizes": "1080x2270",
+            "type": "image/jpg",
+            "form_factor": "narrow"
+        },
+        {
+            "src": "screenshots/image8.jpg",
+            "sizes": "2206x1489",
+            "type": "image/jpg",
+            "form_factor": "wide"
+        },
+        {
+            "src": "screenshots/image9.jpg",
+            "sizes": "2206x1489",
+            "type": "image/jpg",
+            "form_factor": "wide"
+        },
+        {
+            "src": "screenshots/image10.jpg",
+            "sizes": "2206x1489",
+            "type": "image/jpg",
+            "form_factor": "wide"
+        }
+    ]
+}
