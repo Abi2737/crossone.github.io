@@ -626,7 +626,7 @@
     });
 
     const supportsInstallPrompt = 'onbeforeinstallprompt' in window;
-    if (supportsInstallPrompt) {
+    if (!supportsInstallPrompt) {
       console.log("supportsInstallPrompt false, getting template");
       const template = getInstallSheetTemplate();
 
@@ -668,9 +668,7 @@
         installDialog.showModal();
         installDialog.querySelector('.body').scrollTop = 0;
 
-        setTimeout(() => {
           installDialog.setAttribute('opened', '');
-        })
       } else {
         console.log("no deferredPrompt");
       }
