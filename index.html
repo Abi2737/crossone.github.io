@@ -626,7 +626,7 @@
     });
 
     const supportsInstallPrompt = 'onbeforeinstallprompt' in window;
-    if (!supportsInstallPrompt) {
+    if (supportsInstallPrompt) {
       console.log("supportsInstallPrompt false, getting template");
       const template = getInstallSheetTemplate();
 
