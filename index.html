@@ -156,7 +156,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      flex-grow: 2;
+      flex-grow: 1;
       padding-inline: 1rem;
     }
 
@@ -380,6 +380,7 @@
             <img src="screenshots/image7.jpg" class="narrow">
             <img src="screenshots/image8.jpg" class="wide">
             <img src="screenshots/image9.jpg" class="wide">
+            <img src="screenshots/image10.jpg" class="wide">
           </div>
         </div>
         <div class="forward">
@@ -614,6 +615,7 @@
     const forwardButton = document.querySelector('#forward-button');
     const screenShots = document.querySelector('#install-dialog .screenshots');
     const scrollDiv = screenShots.querySelector('#install-dialog .screenshots .scroll-div');
+    const innerDiv = scrollDiv.querySelector('div');
     let curPos;
 
     let deferredPrompt;
@@ -667,7 +669,9 @@
         installDialog.showModal();
         installDialog.querySelector('.body').scrollTop = 0;
 
+        setTimeout(() => {
           installDialog.setAttribute('opened', '');
+        })
       } else {
         console.log("no deferredPrompt");
       }
@@ -676,26 +680,34 @@
     // Track how PWA was launched (either from browser or as PWA)
     function getLaunchMode() {
       const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
+      console.log('isStandalone: ', isStandalone);
 
       if (deferredPrompt) {
+        console.log('deferredPrompt: ', deferredPrompt);
         hasPrompt();
       }
 
       if(window.deferredPrompt) {
+        console.log('window.deferredPrompt: ', window.deferredPrompt);
         hasPrompt();
       }
 
       if (isIOS() || isMacOS()) {
+        console.log("isIOS() || isMacOS()");
         hasPrompt();
       }
 
       hasPrompt();
 
       if (document.referrer.startsWith('android-app://')) {
+        console.log('document.referrer: ', document.referrer);
         appLaunchedAsTWA();
       } else if (navigator.standalone || isStandalone) {
+        console.log('navigator.standalone: ', navigator.standalone);
+        console.log('isStandalone: ', isStandalone);
         appLaunchedAsPWA();
       } else {
+        console.log('window.appLaunchedInBrowser');
         window.appLaunchedInBrowser();
       }
     }
