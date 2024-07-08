@@ -676,34 +676,26 @@
     // Track how PWA was launched (either from browser or as PWA)
     function getLaunchMode() {
       const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
-      console.log('isStandalone: ', isStandalone);
 
       if (deferredPrompt) {
-        console.log('deferredPrompt: ', deferredPrompt);
         hasPrompt();
       }
 
       if(window.deferredPrompt) {
-        console.log('window.deferredPrompt: ', window.deferredPrompt);
         hasPrompt();
       }
 
       if (isIOS() || isMacOS()) {
-        console.log("isIOS() || isMacOS()");
         hasPrompt();
       }
 
       hasPrompt();
 
       if (document.referrer.startsWith('android-app://')) {
-        console.log('document.referrer: ', document.referrer);
         appLaunchedAsTWA();
       } else if (navigator.standalone || isStandalone) {
-        console.log('navigator.standalone: ', navigator.standalone);
-        console.log('isStandalone: ', isStandalone);
         appLaunchedAsPWA();
       } else {
-        console.log('window.appLaunchedInBrowser');
         window.appLaunchedInBrowser();
       }
     }
